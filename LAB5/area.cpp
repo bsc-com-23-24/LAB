@@ -55,7 +55,7 @@ int main(){
  while(true){
     cout << "Select Shape: ";
     if(cin >> choice){
-        if(choice >0 && choice < 4){
+        if(choice >=0 && choice < 4){
             if (choice == 1){
                 double side = getvalidinput("Enter the side of your Square: ");
                 double area = areasquare(side);
