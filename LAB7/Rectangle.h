@@ -1,17 +1,21 @@
 #pragma once
 
 class Rectangle{
+
+
     private:
         float length;
         float width;
 
-    Rectangle();
+   
     public:
-        void setwidth();
-        void setlength();
+        void setWidth(float);
+        void setLength(float);
 
-        float getwidth();
-        float getlength();
+        float getWidth() const;
+        float getLength() const;
 
-        float getarea();
+        float getArea() const;
+
+         Rectangle();
 };
