@@ -4,6 +4,10 @@ Rectangle::Rectangle(){
     width = 0;
     length = 0;
 }
+Rectangle::Rectangle(float l, float w){
+    length = l;
+    width = w;
+}
 void Rectangle::setWidth(float w){
     width = w;
 }

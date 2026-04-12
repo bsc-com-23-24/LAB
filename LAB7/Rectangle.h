@@ -18,4 +18,5 @@ class Rectangle{
         float getArea() const;
 
          Rectangle();
+         Rectangle(float length, float width);
 };
