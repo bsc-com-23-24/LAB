@@ -1,50 +1,49 @@
 #include "Person.h"
+#include <iostream>
 
-Person::Person()
-    : mWeight(0.0f), mFirstName(""), mAge(0)
-{
+using namespace std;
+
+// Default constructor
+Person::Person() : mWeight(0.0f), mFirstName(""), mAge(0) {
+  cout << "Default constructor called" << endl;
 }
 
-Person::Person(float newWeight)
-    : mWeight(newWeight), mFirstName(""), mAge(0)
-{
+// Parameterized constructor
+Person::Person(float newWeight) : mWeight(newWeight), mFirstName(""), mAge(0) {
+  cout << "Parameterized constructor called" << endl;
 }
 
-Person::~Person()
-{
+// Destructor
+Person::~Person() {
+  cout << "Destructor called for " << mFirstName << endl;
 }
 
-void Person::setWeight(float newWeight)
-{
-    mWeight = newWeight;
+// Setters and Getters
+void Person::setWeight(float newWeight) {
+  mWeight = newWeight;
 }
 
-double Person::getWeight() const
-{
-    return mWeight;
+double Person::getWeight() const {
+  return mWeight;
 }
 
-void Person::setFirstName(const string& firstName)
-{
-    mFirstName = firstName;
+void Person::setFirstName(const string &firstName) {
+  mFirstName = firstName;
 }
 
-const string& Person::getFirstName() const
-{
-    return mFirstName;
+const string &Person::getFirstName() const {
+  return mFirstName;
 }
 
-void Person::setAge(int age)
-{
-    mAge = age;
+void Person::setAge(int age) {
+  mAge = age;
 }
 
-int Person::getAge() const
-{
-    return mAge;
+int Person::getAge() const {
+  return mAge;
 }
 
-float Person::operator+(const Person& otherPerson)
-{
-    return mWeight + otherPerson.mWeight;
+// Overloaded + operator: returns the sum of two persons' weights
+float Person::operator+(const Person &otherPerson) {
+  return mWeight + otherPerson.mWeight;
 }
