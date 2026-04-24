@@ -10,16 +10,6 @@ public:
 
   ~Person();
 
-  void setWeight(float newWeight);
-  double getWeight() const;
-
-  void setFirstName(const string &firstName);
-  const string &getFirstName() const;
-
-  void setAge(int age);
-  int getAge() const;
-
-  // Overload the add operator
   float operator+(const Person &otherPerson);
 
 private:
